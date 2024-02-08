@@ -1,0 +1,34 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<div>
+    <h1>OvrigAnställning</h1>
+    <div class="col-md-4">
+        <InputText class="form-control" @bind-Value="@OvrigAnställning.Ort" />
+    </div>
+</div>
+
+<div>
+    <h1>ÖvrigAnställning</h1>
+    <div class="col-md-4">
+        <InputText class="form-control" @bind-Value="@ÖvrigAnställning.Ort" />
+    </div>
+</div>
+
+@code {
+
+    public class ÖvrigAnställningModel
+{
+    public ÖvrigAnställningModel()
+    {
+        Ort = "Test";
+    }
+    
+    public string Ort {get;set;} = string.Empty;
+
+}
+    private ÖvrigAnställningModel ÖvrigAnställning = new ÖvrigAnställningModel();
+
+    private ÖvrigAnställningModel OvrigAnställning = new ÖvrigAnställningModel();
+}
